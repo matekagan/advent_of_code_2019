@@ -13,7 +13,7 @@ class Day1Solution {
     if (result <= 0) 0 else result + calculateFuelForFuel(result)
   }
 
-  def calculate(stream: LazyList[String], mapping: Int => Int) : Int = {
+  def calculate(stream: List[String], mapping: Int => Int) : Int = {
     val sum = (x: Int, y : Int) => x + y
     stream.map(value => value.toInt)
       .map(mapping)
